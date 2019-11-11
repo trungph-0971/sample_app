@@ -1,0 +1,8 @@
+enabled_locales: ["en", "vi"]
+client:
+  host: "localhost:3000"
+  railscontact: "https://www.railstutorial.org/contact"
+  railshelp: "https://www.railstutorial.org/help"
+  railsbook: "https://www.railstutorial.org/book"
+  railshome: "https://www.railstutorial.org/"
+  railsscreencast: "http://screencasts.railstutorial.org/"

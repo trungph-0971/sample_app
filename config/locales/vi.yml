@@ -1,0 +1,32 @@
+vi:
+  eng: Tiếng Anh
+  vie: Tiếng Việt
+  layout:
+    application:
+      title: Ứng dụng mẫũ của hướng Ruby on Rails
+  static_pages:
+    home:
+      title: Trung chủ
+      h1: Ứng dụng mẫu
+      p1: Đây là trang chủ của
+      p2: ứng dụng mẫu
+    about:
+      title: About
+      p1: ''
+      p2: là một
+      p3: và
+      p4: để dạy lập trình web với
+      p5: Đây là một ứng dụng mẫu cho ví dụ.
+      a1: sách
+      a2: chuỗi các screencast
+      e1: Hướng dẫn Ruby on Rails
+    contact:
+      title: Liên hệ
+      p1: Liên hệ hướng dẫn Ruby on Rails về ứng dụng mẫu tại
+      a1: trang liên hệ.
+    help:
+      title: Trợ giúp
+      p1: Yêu cầu trợ giúp với Ruby on Rails tại
+      p2: Để yêu cầu trợ giúp vè ứng dụng mẫu này, xem
+      a1: hướng dẫn Rails phần trợ giúp
+      a2: sách
