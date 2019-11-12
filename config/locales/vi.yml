@@ -1,4 +1,12 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        created_at: "Tạo lúc"
+        updated_at: "Cập nhật lúc"
+        password: "Mật khẩu"
   eng: Tiếng Anh
   vie: Tiếng Việt
   mh: Michael Hartl
