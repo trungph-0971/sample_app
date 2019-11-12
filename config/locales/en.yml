@@ -1,16 +1,25 @@
 en:
   eng: English
   vie: Vietnamese
-  layout:
+  mh: Michael Hartl
+  sa: sample app
+  layouts:
     application:
       title: Ruby on Rails Tutorial Sample App
+    footer:
+      the: The
+      by: by
+    header:
+      login: Login
   static_pages:
     home:
       title: Home
-      h1: Sample App
+      h1: Welcome to the Sample App
       p1: This is the home page for the.
       p2: sample application.
       a1: Ruby on Rails Tutorial
+      signup: Sign up now!
+      logo: Rails logo
     about:
       title: About
       p1: The
@@ -32,3 +41,9 @@ en:
       p2: To get help on this sample app, see the
       a1: Rails Tutorial help section
       a2: book
+    news:
+      title: News
+  users:
+    new:
+      signup: Sign up
+      p1: This will be a signup page for new users.

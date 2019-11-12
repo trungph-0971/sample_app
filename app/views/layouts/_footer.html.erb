@@ -1,0 +1,15 @@
+<footer class="footer">
+  <small>
+    <%= t ".the" %> <%= link_to t("static_pages.about.e1"), Settings.client.railshome %>
+    <%= t ".by" %> <%= link_to t("mh"), Settings.client.mh %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("eng"), locale: "en" %></li>
+      <li><%= link_to t("vie"), locale: "vi" %></li>
+      <li><%= link_to t("static_pages.about.title"), about_path %></li>
+      <li><%= link_to t("static_pages.contact.title"), contact_path %></li>
+      <li><%= link_to t("static_pages.news.title"), Settings.client.railsnews %></li>
+    </ul>
+  </nav>
+</footer>

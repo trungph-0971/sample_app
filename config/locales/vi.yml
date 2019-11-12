@@ -1,9 +1,16 @@
 vi:
   eng: Tiếng Anh
   vie: Tiếng Việt
-  layout:
+  mh: Michael Hartl
+  sa: sample app
+  layouts:
     application:
-      title: Ứng dụng mẫũ của hướng Ruby on Rails
+      title: Ứng dụng mẫũ của hướng dẫn Ruby on Rails
+    footer:
+      the: ''
+      by: bởi
+    header:
+      login: Đăng nhập
   static_pages:
     home:
       title: Trang chủ
@@ -11,6 +18,8 @@ vi:
       p1: Đây là trang chủ của
       p2: ứng dụng mẫu
       a1: Hướng dẫn Ruby on Rails
+      signup: Đăng ký ngay!
+      logo: Biểu tượng của Rails
     about:
       title: Giới thiệu
       p1: ''
@@ -32,3 +41,9 @@ vi:
       p2: Để yêu cầu trợ giúp vè ứng dụng mẫu này, xem
       a1: hướng dẫn Rails phần trợ giúp
       a2: sách
+    news:
+      title: "Tin tức"
+  users:
+    new:
+      signup: Đăng ký
+      p1: Đây sẽ là trang đăng ký cho người dùng mới.
