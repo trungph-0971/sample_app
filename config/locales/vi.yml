@@ -6,12 +6,13 @@ vi:
       title: Ứng dụng mẫũ của hướng Ruby on Rails
   static_pages:
     home:
-      title: Trung chủ
+      title: Trang chủ
       h1: Ứng dụng mẫu
       p1: Đây là trang chủ của
       p2: ứng dụng mẫu
+      a1: Hướng dẫn Ruby on Rails
     about:
-      title: About
+      title: Giới thiệu
       p1: ''
       p2: là một
       p3: và
@@ -19,6 +20,7 @@ vi:
       p5: Đây là một ứng dụng mẫu cho ví dụ.
       a1: sách
       a2: chuỗi các screencast
+      a3: Ruby on Rails
       e1: Hướng dẫn Ruby on Rails
     contact:
       title: Liên hệ
