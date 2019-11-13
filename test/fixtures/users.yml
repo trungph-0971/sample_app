@@ -1,0 +1,5 @@
+drizzy:
+  name: Drizzy Drake
+  email: dd@ovo.com
+  password_digest: <%= User.digest("password") %>
+  

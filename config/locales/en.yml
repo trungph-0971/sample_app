@@ -8,6 +8,11 @@ en:
         updated_at: "Updated at"
         password: "Password"
         password_confirmation: "Confirmation"
+  helpers:
+    label:
+      session:
+        email: "Email"
+        password: "Password"
   eng: English
   vie: Vietnamese
   mh: Michael Hartl
@@ -28,6 +33,11 @@ en:
       the: The
       by: by
     header:
+      account: Account
+      users: Users
+      profile: Profile
+      settings: Settings
+      logout: Log out
       login: Login
   shared:
     messages:
@@ -74,3 +84,10 @@ en:
       signup: Sign up
       p1: This will be a signup page for new users.
       createacc: Create my account
+  sessions:
+    new:
+      title: Login
+      login: Log in
+      newuser: New user?
+      signupnow: Sign up now!
+      remember: Remember me on this computer
