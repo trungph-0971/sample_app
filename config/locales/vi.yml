@@ -86,8 +86,8 @@ vi:
       createacc: Tạo tài khoản
   sessions:
     new:
-      title: Trang đăng nhập
+      title: Đăng nhập
       login: Đăng nhập
-      newuser: Bạn là người dùng mới?
+      newuser: Bạn là người dùng mới? 
       signupnow: Đăng ký ngay!
       remember: Ghi nhớ phiên đăng nhập
