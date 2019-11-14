@@ -1,0 +1,9 @@
+<% provide :title, t("static_pages.home.title") %>
+<%= link_to t("eng"), locale: "en" %>
+<%= link_to t("vie"), locale: "vi" %>
+<h1><%= t ".h1" %></h1>
+<p>
+  <%= t ".p1" %>
+  <%= link_to "Ruby on Rails Tutorial", Settings.client.railshome %>
+  <%= t ".p2" %>
+</p>

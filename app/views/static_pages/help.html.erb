@@ -1,0 +1,11 @@
+<% provide :title, t("static_pages.help.title") %>
+<%= link_to t("eng"), locale: "en" %>
+<%= link_to t("vie"), locale: "vi" %>
+<h1><%= t ".title" %></h1>
+<p>
+  <%= t ".p1" %>
+  <%= link_to t(".a1"), Settings.client.railshelp %>
+  <%= t ".p2" %>
+  <%= link_to t(".a2"), Settings.client.railsbook %>
+  <%= t ".a1" %>
+</p>
