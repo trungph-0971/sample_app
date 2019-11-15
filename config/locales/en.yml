@@ -10,6 +10,7 @@ en:
       h1: Sample App
       p1: This is the home page for the.
       p2: sample application.
+      a1: Ruby on Rails Tutorial
     about:
       title: About
       p1: The
@@ -19,6 +20,7 @@ en:
       p5: This is the sample application for the tutorial.
       a1: book
       a2: screencast series
+      a3: Ruby on Rails
       e1: Ruby on Rails Tutorial
     contact:
       title: Contact
