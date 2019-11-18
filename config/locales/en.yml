@@ -13,10 +13,6 @@ en:
       session:
         email: "Email"
         password: "Password"
-  eng: English
-  vie: Vietnamese
-  mh: Michael Hartl
-  sa: sample app
   controllers:
     users:
       welcome: Welcome to the Sample App.
@@ -24,8 +20,10 @@ en:
       warning: Please log in.
       deleted: User deleted
       nonexist: User does not exist.
-    sessions:
-      error: Invalid email/password combination
+  eng: English
+  vie: Vietnamese
+  mh: Michael Hartl
+  sa: sample app
   layouts:
     application:
       title: Ruby on Rails Tutorial Sample App
@@ -39,6 +37,10 @@ en:
       settings: Settings
       logout: Log out
       login: Login
+      users: Users
+      profile: Profile
+      settings: Settings
+      logout: Log out
   shared:
     messages:
       p: The form contains
@@ -80,12 +82,26 @@ en:
       title: News
   users:
     login: Login
+    user:
+      confirm: You sure?
+      delete: Delete
+    index:
+      title: All users
     new:
       signup: Sign up
       p1: This will be a signup page for new users.
       createacc: Create my account
+    edit:
+      title: Edit user
+      h1: Update your profile
+      confirm: Confirmation
+      save: Save changes
   sessions:
+    create:
+      errors: Invalid email/password combination
     new:
+      email: Email
+      password: Password
       title: Login
       login: Log in
       newuser: New user?

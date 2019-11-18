@@ -20,8 +20,6 @@ vi:
       warning: Vui lòng đăng nhập.
       deleted: Xóa thành công
       nonexist: Người dùng không tồn tại.
-    sessions:
-      error: Email hoặc mật khẩu không đúng.
   eng: Tiếng Anh
   vie: Tiếng Việt
   mh: Michael Hartl
@@ -39,6 +37,10 @@ vi:
       settings: Cài đặt
       logout: Đăng xuất
       login: Đăng nhập
+      users: Xem người dùng
+      profile: Hồ sơ
+      settings: Cài đặt
+      logout: Đăng xuất
   shared:
     messages:
       p: Form có chứa
@@ -80,12 +82,26 @@ vi:
       title: "Tin tức"
   users:
     login: Đăng nhập
+    user:
+      confirm: Bạn chắc chứ?
+      delete: Xóa
+    index:
+      title: Tất cả người dùng
     new:
       signup: Đăng ký
       p1: Đây sẽ là trang đăng ký cho người dùng mới.
       createacc: Tạo tài khoản
+    edit:
+      title: Chỉnh sửa người dùng
+      h1: Cập nhật hồ sơ
+      confirm: Xác nhận
+      save: Lưu thay đổi
   sessions:
+    create:
+        errors: Email hoặc mật khẩu không đúng.
     new:
+      email: Email
+      password: Mật khẩu
       title: Đăng nhập
       login: Đăng nhập
       newuser: Bạn là người dùng mới? 
