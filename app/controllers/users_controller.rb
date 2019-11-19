@@ -21,11 +21,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-    log_in @user
     if @user.save
-      flash[:success] = t "controllers.users.welcome"
-      log_in @user
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "controllers.users.active"
+      redirect_to root_path
     else
       render :new
     end
@@ -71,7 +70,7 @@ end
 # Confirms the correct user.
 def correct_user
   @user = User.find params[:id]
-  redirect_to root_url unless current_user?(@user)
+  redirect_to root_url unless current_user? @user
 end
 
 # Confirms an admin user.

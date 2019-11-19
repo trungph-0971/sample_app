@@ -16,10 +16,20 @@ en:
   controllers:
     users:
       welcome: Welcome to the Sample App.
+      active: Please check your email to activate your account.
       updated: Profile updated.
       warning: Please log in.
       deleted: User deleted
       nonexist: User does not exist.
+    account_activations:
+      success: Account activated!
+      danger: Invalid activation link
+    password_reset:
+      title: Password reset
+  mailers:
+    user:
+      subject: Account activation
+      greeting: Hi!
   eng: English
   vie: Vietnamese
   mh: Michael Hartl
@@ -96,9 +106,16 @@ en:
       h1: Update your profile
       confirm: Confirmation
       save: Save changes
+  user_mailer:
+    account_activation:
+      title: Sample App
+      p1: Hi
+      p2: Welcome to the Sample App! Click on the link below to activate your account
+      activate: Activate
   sessions:
     create:
       errors: Invalid email/password combination
+      message: Account is not activated. Check your email for the activation link.
     new:
       email: Email
       password: Password

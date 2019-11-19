@@ -5,13 +5,14 @@ class SessionsController < ApplicationController
 
   def create
     if @user&.authenticate params[:session][:password]
-      log_in @user
-      if params[:session][:remember_me] == Settings.remember_checked
-        remember @user
+      if @user.activated?
+        log_in @user
+        check_remember params[:session][:remember_me]
+        redirect_back_or @user
       else
-        forget @user
+        flash[:warning] = t ".message"
+        redirect_to root_path
       end
-      redirect_back_or @user
     else
       flash.now[:danger] = t ".errors"
       render :new
@@ -24,6 +25,14 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def check_remember _remember
+    if params[:session][:remember_me] == Settings.remember_checked
+      remember @user
+    else
+      forget @user
+    end
+  end
 
   def load_user
     @user = User.find_by email: params[:session][:email].downcase
