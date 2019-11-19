@@ -22,9 +22,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t "controllers.users.welcome"
-      log_in @user
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "controllers.users.active"
+      redirect_to root_path
     else
       render :new
     end
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def user_params
     params.require(:user).permit(:name, :email, :password,
                                  :password_confirmation)
@@ -72,7 +72,7 @@ end
 # Confirms the correct user.
 def correct_user
   return if current_user? @user
-  
+
   flash[:danger] = t "controllers.users.not_allowed"
   redirect_to root_path
 end
