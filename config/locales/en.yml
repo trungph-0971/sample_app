@@ -7,10 +7,20 @@ en:
         created_at: "Created at"
         updated_at: "Updated at"
         password: "Password"
+        password_confirmation: "Confirmation"
   eng: English
   vie: Vietnamese
   mh: Michael Hartl
   sa: sample app
+  controllers:
+    users:
+      welcome: Welcome to the Sample App.
+      updated: Profile updated.
+      warning: Please log in.
+      deleted: User deleted
+      nonexist: User does not exist.
+    sessions:
+      error: Invalid email/password combination
   layouts:
     application:
       title: Ruby on Rails Tutorial Sample App
@@ -19,6 +29,12 @@ en:
       by: by
     header:
       login: Login
+  shared:
+    messages:
+      p: The form contains
+      errors:
+        one: 1 error
+        other: "%{count} errors"
   static_pages:
     home:
       title: Home
@@ -26,8 +42,9 @@ en:
       p1: This is the home page for the.
       p2: sample application.
       a1: Ruby on Rails Tutorial
-      signup: Sign up now!
       logo: Rails logo
+      signup: Sign up
+      signupnow: Sign up now!
     about:
       title: About
       p1: The
@@ -52,6 +69,8 @@ en:
     news:
       title: News
   users:
+    login: Login
     new:
       signup: Sign up
       p1: This will be a signup page for new users.
+      createacc: Create my account

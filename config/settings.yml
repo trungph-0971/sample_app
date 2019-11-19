@@ -11,3 +11,4 @@ enabled_locales: ["en", "vi"]
 max_name: 50
 max_email: 255
 min_password: 6
+username: sample_app
