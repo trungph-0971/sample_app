@@ -24,12 +24,10 @@ vi:
     account_activations:
       success: Tài khoản đã được kích hoạt!
       danger: Đường dẫn kích hoạt không hợp lệ.
-    password_reset:
-      title: Dat lai mat khau
   mailers:
     user:
       subject: Kích hoạt tài khoản
-      greeting: Xin chao!
+      greeting: Xin chào!
   eng: Tiếng Anh
   vie: Tiếng Việt
   mh: Michael Hartl
@@ -124,3 +122,21 @@ vi:
       newuser: Bạn là người dùng mới? 
       signupnow: Đăng ký ngay!
       remember: Ghi nhớ phiên đăng nhập
+      forgot: (Quên mật khẩu)
+  password_resets:
+    danger2: Lệnh đặt lại mật khẩu đã hết hạn
+    new:
+      title: Quên mật khẩu
+      email: Email
+      submit: Hoàn tất
+    edit:
+      title: Đặt lại mật khẩu
+      password: Mật khẩu mới
+      confirm: Xác nhận mật khẩu mới
+      update: Cập nhật
+    create:
+      info: Email đã được gửi đi kèm với hưỡng đãn đặt lại mật khẩu
+      danger: Không tìm thấy địa chỉ email
+    update:
+      empty: không được để trống
+      success: Mật khẩu đã được đặt lại.

@@ -24,8 +24,6 @@ en:
     account_activations:
       success: Account activated!
       danger: Invalid activation link
-    password_reset:
-      title: Password reset
   mailers:
     user:
       subject: Account activation
@@ -112,6 +110,12 @@ en:
       p1: Hi
       p2: Welcome to the Sample App! Click on the link below to activate your account
       activate: Activate
+    password_reset:
+      title: Password reset
+      p1: To reset your password click the link below
+      reset: Reset password
+      p2: This link will expire in two hours.
+      p3: If you did not request your password to be reset, please ignore this email and your password will stay as it is.
   sessions:
     create:
       errors: Invalid email/password combination
@@ -124,3 +128,21 @@ en:
       newuser: New user?
       signupnow: Sign up now!
       remember: Remember me on this computer
+      forgot: (Forgot password)
+  password_resets:
+    danger2: Password reset has expired.
+    new:
+      title: Password reset
+      email: Email
+      submit: Submit
+    edit:
+      title: Reset password
+      password: Password
+      confirm: Password confirmation
+      update: Update
+    create:
+      info: Email sent with password reset instructions
+      danger1: Email address not found
+    update:
+      empty: can't be empty
+      success: Password has been reset.

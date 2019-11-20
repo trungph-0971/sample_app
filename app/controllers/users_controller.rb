@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find params[:id]
     if @user.update user_params
-      flash[:success] = I18n.t "controllers.users.updated"
+      flash[:success] = t "controllers.users.updated"
       redirect_to @user
     else
       render :edit
@@ -46,8 +46,8 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = I18n.t "controllers.users.deleted"
-    redirect_to users_url
+    flash[:success] = t "controllers.users.deleted"
+    redirect_to users_path
   end
 
   private
@@ -62,18 +62,18 @@ class UsersController < ApplicationController
     return if logged_in?
 
     store_location
-    flash[:danger] = I18n.t "controllers.users.warning"
-    redirect_to login_url
+    flash[:danger] = t "controllers.users.warning"
+    redirect_to login_path
   end
 end
 
 # Confirms the correct user.
 def correct_user
   @user = User.find params[:id]
-  redirect_to root_url unless current_user? @user
+  redirect_to root_path unless current_user? @user
 end
 
 # Confirms an admin user.
 def admin_user
-  redirect_to root_url unless current_user.admin?
+  redirect_to root_path unless current_user.admin?
 end

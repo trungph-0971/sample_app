@@ -8,16 +8,19 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal I18n.t("mailers.user.subject"), mail.subject
     assert_equal [user.email], mail.to
     assert_equal ["noreply@example.com"], mail.from
-    assert_match user.name, mail.body.encoded
-    assert_match user.activation_token, mail.body.encoded
+    assert_match user.name, mail.text_part.body.to_s.encode("UTF-8")
+    assert_match user.activation_token, mail.text_part.body.to_s.encode("UTF-8")
     assert_match CGI.escape(user.email), mail.body.encoded
   end
 
   test "password_reset" do
-    mail = UserMailer.password_reset
-    assert_equal I18n.t("controllers.password_reset.title"), mail.subject
-    assert_equal ["to@example.org"], mail.to
+    user = users :trung
+    user.reset_token = User.new_token
+    mail = UserMailer.password_reset user
+    assert_equal I18n.t("password_resets.new.title"), mail.subject.encode("UTF-8")
+    assert_equal [user.email], mail.to
     assert_equal ["noreply@example.com"], mail.from
-    assert_match I18n.t("mailers.user.greeting"), mail.body.encoded
+    assert_match user.reset_token, mail.body.encoded
+    assert_match CGI.escape(user.email), mail.body.encoded
   end
 end
