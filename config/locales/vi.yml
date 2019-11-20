@@ -8,6 +8,11 @@ vi:
         updated_at: "Cập nhật lúc"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
+  helpers:
+    label:
+      session:
+        email: "Email"
+        password: "Mật khẩu"
   controllers:
     users:
       welcome: Chào mừng đến với Ứng dụng mẫu.
@@ -28,6 +33,11 @@ vi:
       the: ''
       by: bởi
     header:
+      account: Tài khoản
+      users: Danh sách người dùng
+      profile: Hồ sơ
+      settings: Cài đặt
+      logout: Đăng xuất
       login: Đăng nhập
   shared:
     messages:
@@ -74,3 +84,10 @@ vi:
       signup: Đăng ký
       p1: Đây sẽ là trang đăng ký cho người dùng mới.
       createacc: Tạo tài khoản
+  sessions:
+    new:
+      title: Trang đăng nhập
+      login: Đăng nhập
+      newuser: Bạn là người dùng mới?
+      signupnow: Đăng ký ngay!
+      remember: Ghi nhớ phiên đăng nhập
