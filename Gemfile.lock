@@ -48,7 +48,9 @@ GEM
     bindex (0.8.1)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+      sassc (>= 2.0.0)
+    bootstrap-will_paginate (1.0.0)
+      will_paginate
     builder (3.2.3)
     byebug (9.0.6)
     coderay (1.1.2)
@@ -101,6 +103,8 @@ GEM
     erubi (1.9.0)
     excon (0.68.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.11.2)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -277,7 +281,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.7.0)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
     jaro_winkler (1.5.4)
@@ -394,11 +398,6 @@ GEM
       rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -441,6 +440,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    will_paginate (3.1.6)
     xml-simple (1.1.5)
     xmlrpc (0.3.0)
 
@@ -450,9 +450,11 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.12)
   bootstrap-sass (= 3.4.1)
+  bootstrap-will_paginate (= 1.0.0)
   byebug (= 9.0.6)
-  coffee-rails (= 4.2.2)
+  coffee-rails
   config
+  faker (= 1.7.3)
   fog (= 1.42)
   guard (= 2.14.1)
   guard-minitest (= 2.4.6)
@@ -475,6 +477,7 @@ DEPENDENCIES
   turbolinks
   tzinfo-data
   web-console (= 3.5.1)
+  will_paginate (= 3.1.6)
 
 BUNDLED WITH
    1.17.2
