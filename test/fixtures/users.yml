@@ -13,6 +13,20 @@ trung:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+jcole:
+  name: Jermaine Cole
+  email: jcole123@gmail.com
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+bigsean:
+  name: Big Sean
+  email: bsean123@gmail.com
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>

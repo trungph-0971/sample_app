@@ -14,6 +14,8 @@ vi:
         email: "Email"
         password: "Mật khẩu"
   controllers:
+    application:
+      danger: Vui lòng đăng nhập.
     users:
       welcome: Chào mừng đến với Ứng dụng mẫu.
       active: Vui lòng kiểm tra hộp thư để kích hoạt tài khoản.
@@ -21,6 +23,9 @@ vi:
       warning: Vui lòng đăng nhập.
       deleted: Xóa thành công
       nonexist: Người dùng không tồn tại.
+    microposts:
+      success: Bài đăng đã được tạo!
+      success_delete: Bài đăng đã được xóa!
     account_activations:
       success: Tài khoản đã được kích hoạt!
       danger: Đường dẫn kích hoạt không hợp lệ.
@@ -55,6 +60,11 @@ vi:
       errors:
         one: 1 lỗi
         other: "%{count} lỗi"
+    user_info:
+      myprofile: Xem trang cá nhân
+    micropost_form:
+      placeholder: Viết bài đăng mới...
+      post: Đăng
   static_pages:
     home:
       title: Trang chủ
@@ -65,6 +75,7 @@ vi:
       logo: Biểu tượng của Rails
       signup: Đăng ký
       signupnow: Đăng ký ngay!
+      feed: Trang bài đăng
     about:
       title: Giới thiệu
       p1: ''
@@ -99,6 +110,8 @@ vi:
       signup: Đăng ký
       p1: Đây sẽ là trang đăng ký cho người dùng mới.
       createacc: Tạo tài khoản
+    show:
+      microposts: Các bài đăng
     edit:
       title: Chỉnh sửa người dùng
       h1: Cập nhật hồ sơ
@@ -140,3 +153,7 @@ vi:
     update:
       empty: không được để trống
       success: Mật khẩu đã được đặt lại.
+  microposts:
+    micropost:
+      posted: Được đăng
+      ago: trước.

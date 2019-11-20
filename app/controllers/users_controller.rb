@@ -9,10 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:danger] = t "controllers.users.nonexist"
-    redirect_to root_path
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
@@ -57,23 +54,14 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
-  # Confirms a logged-in user.
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "controllers.users.warning"
-    redirect_to login_path
+  # Confirms the correct user.
+  def correct_user
+    @user = User.find params[:id]
+    redirect_to root_path unless current_user? @user
   end
-end
 
-# Confirms the correct user.
-def correct_user
-  @user = User.find params[:id]
-  redirect_to root_path unless current_user? @user
-end
-
-# Confirms an admin user.
-def admin_user
-  redirect_to root_path unless current_user.admin?
+  # Confirms an admin user.
+  def admin_user
+    redirect_to root_path unless current_user.admin?
+  end
 end

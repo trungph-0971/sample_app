@@ -14,6 +14,8 @@ en:
         email: "Email"
         password: "Password"
   controllers:
+    application:
+      danger: Please log in.
     users:
       welcome: Welcome to the Sample App.
       active: Please check your email to activate your account.
@@ -21,6 +23,9 @@ en:
       warning: Please log in.
       deleted: User deleted
       nonexist: User does not exist.
+    microposts:
+      success: Micropost created!
+      success_delete: Micropost deleted!
     account_activations:
       success: Account activated!
       danger: Invalid activation link
@@ -55,6 +60,11 @@ en:
       errors:
         one: 1 error
         other: "%{count} errors"
+    user_info:
+      myprofile: View my profile
+    micropost_form:
+      placeholder: Compose new micropost...
+      post: Post
   static_pages:
     home:
       title: Home
@@ -65,6 +75,7 @@ en:
       logo: Rails logo
       signup: Sign up
       signupnow: Sign up now!
+      feed: Micropost feed
     about:
       title: About
       p1: The
@@ -99,6 +110,8 @@ en:
       signup: Sign up
       p1: This will be a signup page for new users.
       createacc: Create my account
+    show:
+      microposts: Microposts
     edit:
       title: Edit user
       h1: Update your profile
@@ -146,3 +159,7 @@ en:
     update:
       empty: can't be empty
       success: Password has been reset.
+  microposts:
+    micropost:
+      posted: Posted
+      ago: ago.

@@ -38,6 +38,7 @@ class SessionsController < ApplicationController
     @user = User.find_by email: params[:session][:email].downcase
     return if @user
 
+    flash[:danger] = t ".errors"
     redirect_to login_path
   end
 end
