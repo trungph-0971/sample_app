@@ -65,4 +65,45 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated? :remember, ""
+  end
+
+  test "associated microposts should be destroyed" do
+    @user.save
+    @user.microposts.create!(content: "Lorem ipsum")
+    assert_difference 'Micropost.count', -1 do
+      @user.destroy
+    end
+  end
+
+  test "should follow and unfollow a user" do
+    trung  = users :trung
+    drizzy = users :drizzy
+    assert_not trung.following?(drizzy)
+    trung.follow(drizzy)
+    assert trung.following?(drizzy)
+    assert drizzy.followers.include?(trung)
+    trung.unfollow(drizzy)
+    assert_not trung.following?(drizzy)
+  end
+
+  test "feed should have the right posts" do
+    trung = users :trung
+    drizzy  = users :drizzy
+    jcole    = users :jcole
+    # Posts from followed user
+    jcole.microposts.each do |post_following|
+      assert trung.feed.include?(post_following)
+    end
+    # Posts from self
+    trung.microposts.each do |post_self|
+      assert trung.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    drizzy.microposts.each do |post_unfollowed|
+      assert_not trung.feed.include?(post_unfollowed)
+    end
+  end
 end

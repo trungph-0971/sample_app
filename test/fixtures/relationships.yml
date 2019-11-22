@@ -1,0 +1,15 @@
+one:
+  follower: trung
+  followed: jcole
+
+two:
+  follower: trung
+  followed: bigsean
+
+three:
+  follower: jcole
+  followed: trung
+
+four:
+  follower: drizzy
+  followed: trung

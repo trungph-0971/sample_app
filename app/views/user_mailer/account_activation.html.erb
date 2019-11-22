@@ -1,0 +1,11 @@
+<h1><%= t "user_mailer.account_activation.title" %></h1>
+
+<p><%= t "user_mailer.account_activation.p1" %> <%= @user.name %>,</p>
+
+<p>
+<%= t "user_mailer.account_activation.p2" %>
+</p>
+
+<%= link_to t("user_mailer.account_activation.activate"), edit_account_activation_url("vi", 
+                                                    @user.activation_token,
+                                                    email: @user.email) %>
