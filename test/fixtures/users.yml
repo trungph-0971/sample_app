@@ -1,15 +1,15 @@
-drizzy:
-  name: Drizzy Drake
-  email: dd@ovo.com
-  password_digest: <%= User.digest("password") %>
-  activated: true
-  activated_at: <%= Time.zone.now %>
-
 trung:
   name: Trung
   email: trung123@gmail.com
   password_digest: <%= User.digest("password") %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+drizzy:
+  name: Drizzy Drake
+  email: dd@ovo.com
+  password_digest: <%= User.digest("password") %>
   activated: true
   activated_at: <%= Time.zone.now %>
 

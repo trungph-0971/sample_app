@@ -23,6 +23,8 @@ en:
       warning: Please log in.
       deleted: User deleted
       nonexist: User does not exist.
+      following: Following
+      followers: Followers
     microposts:
       success: Micropost created!
       success_delete: Micropost deleted!
@@ -65,6 +67,9 @@ en:
     micropost_form:
       placeholder: Compose new micropost...
       post: Post
+    stats:
+      following: Following
+      followers: Followers
   static_pages:
     home:
       title: Home
@@ -117,6 +122,13 @@ en:
       h1: Update your profile
       confirm: Confirmation
       save: Save changes
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
+    show_follow:
+      view: View my profile
+      microposts: Microposts
   user_mailer:
     account_activation:
       title: Sample App
