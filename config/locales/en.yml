@@ -13,19 +13,30 @@ en:
       session:
         email: "Email"
         password: "Password"
-  eng: English
-  vie: Vietnamese
-  mh: Michael Hartl
-  sa: sample app
   controllers:
+    application:
+      danger: Please log in.
     users:
       welcome: Welcome to the Sample App.
+      active: Please check your email to activate your account.
       updated: Profile updated.
       warning: Please log in.
       deleted: User deleted
       nonexist: User does not exist.
-    sessions:
-      error: Invalid email/password combination
+    microposts:
+      success: Micropost created!
+      success_delete: Micropost deleted!
+    account_activations:
+      success: Account activated!
+      danger: Invalid activation link
+  mailers:
+    user:
+      subject: Account activation
+      greeting: Hi!
+  eng: English
+  vie: Vietnamese
+  mh: Michael Hartl
+  sa: sample app
   layouts:
     application:
       title: Ruby on Rails Tutorial Sample App
@@ -39,12 +50,21 @@ en:
       settings: Settings
       logout: Log out
       login: Login
+      users: Users
+      profile: Profile
+      settings: Settings
+      logout: Log out
   shared:
     messages:
       p: The form contains
       errors:
         one: 1 error
         other: "%{count} errors"
+    user_info:
+      myprofile: View my profile
+    micropost_form:
+      placeholder: Compose new micropost...
+      post: Post
   static_pages:
     home:
       title: Home
@@ -55,6 +75,7 @@ en:
       logo: Rails logo
       signup: Sign up
       signupnow: Sign up now!
+      feed: Micropost feed
     about:
       title: About
       p1: The
@@ -80,14 +101,65 @@ en:
       title: News
   users:
     login: Login
+    user:
+      confirm: You sure?
+      delete: Delete
+    index:
+      title: All users
     new:
       signup: Sign up
       p1: This will be a signup page for new users.
       createacc: Create my account
+    show:
+      microposts: Microposts
+    edit:
+      title: Edit user
+      h1: Update your profile
+      confirm: Confirmation
+      save: Save changes
+  user_mailer:
+    account_activation:
+      title: Sample App
+      p1: Hi
+      p2: Welcome to the Sample App! Click on the link below to activate your account
+      activate: Activate
+    password_reset:
+      title: Password reset
+      p1: To reset your password click the link below
+      reset: Reset password
+      p2: This link will expire in two hours.
+      p3: If you did not request your password to be reset, please ignore this email and your password will stay as it is.
   sessions:
+    create:
+      errors: Invalid email/password combination
+      message: Account is not activated. Check your email for the activation link.
     new:
+      email: Email
+      password: Password
       title: Login
       login: Log in
       newuser: New user?
       signupnow: Sign up now!
       remember: Remember me on this computer
+      forgot: (Forgot password)
+  password_resets:
+    danger2: Password reset has expired.
+    new:
+      title: Password reset
+      email: Email
+      submit: Submit
+    edit:
+      title: Reset password
+      password: Password
+      confirm: Password confirmation
+      update: Update
+    create:
+      info: Email sent with password reset instructions
+      danger1: Email address not found
+    update:
+      empty: can't be empty
+      success: Password has been reset.
+  microposts:
+    micropost:
+      posted: Posted
+      ago: ago.

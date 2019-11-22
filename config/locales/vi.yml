@@ -14,14 +14,25 @@ vi:
         email: "Email"
         password: "Mật khẩu"
   controllers:
+    application:
+      danger: Vui lòng đăng nhập.
     users:
       welcome: Chào mừng đến với Ứng dụng mẫu.
+      active: Vui lòng kiểm tra hộp thư để kích hoạt tài khoản.
       updated: Hồ sơ đã được cập nhật.
       warning: Vui lòng đăng nhập.
       deleted: Xóa thành công
       nonexist: Người dùng không tồn tại.
-    sessions:
-      error: Email hoặc mật khẩu không đúng.
+    microposts:
+      success: Bài đăng đã được tạo!
+      success_delete: Bài đăng đã được xóa!
+    account_activations:
+      success: Tài khoản đã được kích hoạt!
+      danger: Đường dẫn kích hoạt không hợp lệ.
+  mailers:
+    user:
+      subject: Kích hoạt tài khoản
+      greeting: Xin chào!
   eng: Tiếng Anh
   vie: Tiếng Việt
   mh: Michael Hartl
@@ -39,12 +50,21 @@ vi:
       settings: Cài đặt
       logout: Đăng xuất
       login: Đăng nhập
+      users: Xem người dùng
+      profile: Hồ sơ
+      settings: Cài đặt
+      logout: Đăng xuất
   shared:
     messages:
       p: Form có chứa
       errors:
         one: 1 lỗi
         other: "%{count} lỗi"
+    user_info:
+      myprofile: Xem trang cá nhân
+    micropost_form:
+      placeholder: Viết bài đăng mới...
+      post: Đăng
   static_pages:
     home:
       title: Trang chủ
@@ -55,6 +75,7 @@ vi:
       logo: Biểu tượng của Rails
       signup: Đăng ký
       signupnow: Đăng ký ngay!
+      feed: Trang bài đăng
     about:
       title: Giới thiệu
       p1: ''
@@ -80,14 +101,59 @@ vi:
       title: "Tin tức"
   users:
     login: Đăng nhập
+    user:
+      confirm: Bạn chắc chứ?
+      delete: Xóa
+    index:
+      title: Tất cả người dùng
     new:
       signup: Đăng ký
       p1: Đây sẽ là trang đăng ký cho người dùng mới.
       createacc: Tạo tài khoản
+    show:
+      microposts: Các bài đăng
+    edit:
+      title: Chỉnh sửa người dùng
+      h1: Cập nhật hồ sơ
+      confirm: Xác nhận
+      save: Lưu thay đổi
+  user_mailer:
+    account_activation:
+      title: Ứng dụng mẫu
+      p1: Xin chào
+      p2: Chào mừng đến với ứng dụng mẫu! Bấm vào link dưới để  kích hoạt tài khoản.
+      activate: Kích hoạt
   sessions:
+    create:
+        errors: Email hoặc mật khẩu không đúng.
+        message: Tài khoản chưa được kích hoạt. Kiểm tra email để lấy đường dẫn kích hoạt.
     new:
-      title: Trang đăng nhập
+      email: Email
+      password: Mật khẩu
+      title: Đăng nhập
       login: Đăng nhập
-      newuser: Bạn là người dùng mới?
+      newuser: Bạn là người dùng mới? 
       signupnow: Đăng ký ngay!
       remember: Ghi nhớ phiên đăng nhập
+      forgot: (Quên mật khẩu)
+  password_resets:
+    danger2: Lệnh đặt lại mật khẩu đã hết hạn
+    new:
+      title: Quên mật khẩu
+      email: Email
+      submit: Hoàn tất
+    edit:
+      title: Đặt lại mật khẩu
+      password: Mật khẩu mới
+      confirm: Xác nhận mật khẩu mới
+      update: Cập nhật
+    create:
+      info: Email đã được gửi đi kèm với hưỡng đãn đặt lại mật khẩu
+      danger: Không tìm thấy địa chỉ email
+    update:
+      empty: không được để trống
+      success: Mật khẩu đã được đặt lại.
+  microposts:
+    micropost:
+      posted: Được đăng
+      ago: trước.

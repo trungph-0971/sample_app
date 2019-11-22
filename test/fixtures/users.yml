@@ -2,4 +2,36 @@ drizzy:
   name: Drizzy Drake
   email: dd@ovo.com
   password_digest: <%= User.digest("password") %>
-  
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+trung:
+  name: Trung
+  email: trung123@gmail.com
+  password_digest: <%= User.digest("password") %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+jcole:
+  name: Jermaine Cole
+  email: jcole123@gmail.com
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+bigsean:
+  name: Big Sean
+  email: bsean123@gmail.com
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+<% end %>
