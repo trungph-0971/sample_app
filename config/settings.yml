@@ -12,3 +12,5 @@ max_name: 50
 max_email: 255
 min_password: 6
 username: sample_app
+remember_checked: "1"
+remember_unchecked: "0"
