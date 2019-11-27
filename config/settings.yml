@@ -12,5 +12,7 @@ max_name: 50
 max_email: 255
 min_password: 6
 username: sample_app
+gravatar_size: 80
+gravatar_size_user: 50
 remember_checked: "1"
 remember_unchecked: "0"
